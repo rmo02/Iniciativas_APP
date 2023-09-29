@@ -1,11 +1,10 @@
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, Text, TouchableOpacity, View, TextInput } from "react-native";
 import CAPA from "../../assets/CAPA.png";
 import {
   Button,
   Dialog,
   Portal,
-  RadioButton,
-  TextInput,
+  RadioButton
 } from "react-native-paper";
 import { Controller, useForm } from "react-hook-form";
 import Toast from "react-native-toast-message";
@@ -146,8 +145,9 @@ export function Home() {
               rules={{ required: true }}
               render={({ field: { onChange, value } }) => (
                 <TextInput
-                  placeholder="Sua sugestão"
-                  style={{ backgroundColor: "#FFFFFF", marginTop: 20 }}
+                  placeholder="Sugestão"
+                  style={{ backgroundColor: "#f5f5f5", marginTop: 20, height:50, paddingLeft:10 }}
+                  multiline
                   onChangeText={onChange}
                   value={value}
                 />
@@ -166,8 +166,8 @@ export function Home() {
               name="nome"
               render={({ field: { onChange, value } }) => (
                 <TextInput
-                  placeholder="Sua sugestão"
-                  style={{ backgroundColor: "#FFFFFF", marginTop: 20 }}
+                  placeholder="Seu nome"
+                  style={{ backgroundColor: "#f5f5f5", marginTop: 20, height:50, paddingLeft:10 }}
                   onChangeText={onChange}
                   value={value}
                 />
@@ -187,7 +187,7 @@ export function Home() {
               render={({ field: { onChange, value } }) => (
                 <TextInput
                   placeholder="Setor"
-                  style={{ backgroundColor: "#FFFFFF", marginTop: 20 }}
+                  style={{ backgroundColor: "#f5f5f5", marginTop: 20, height:50, paddingLeft:10 }}
                   onChangeText={onChange}
                   value={value}
                 />
